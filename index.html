@@ -37,25 +37,9 @@
       document.getElementById("mySkills").innerHTML = isShowMySkill ? "" : generateMySkillInHTML();
       isShowMySkill = !isShowMySkill
     }
-//
-    const myflaw = ["nothing", "nothing", "nothing"]
-    function generatemyflawInHTML() {
-      let htmlString = '<ol>'
-      for (const flaw of myflaw) {
-        htmlString += `<li>${flaw}</li>`
-      }
 
-      htmlString += "</ol>"
+  
 
-      return htmlString;
-    }
-
-    let isShowMyflaw = false;
-
-    function toggleMyflaws() {
-      document.getElementById("myflaw").innerHTML = isShowMyflaw? "" : generatemyflawInHTML();
-      isShowMyflaw = !isShowMySkill
-    }
 
 
 
