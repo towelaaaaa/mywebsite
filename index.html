@@ -5,6 +5,21 @@
   </head>
   <body bgcolor="#dcddf8">
 
+    <script>
+      let isShowMyName = false;
+      function hello(alertText){
+        alert("Hello! "+alertText)
+      }
+      function toggleMyName(){
+        if(!isShowMyName){
+          document.getElementById("myName").innerHTML = "My Name is: <b>FAT CAT</b>";
+        } else {
+          document.getElementById("myName").innerHTML = "";
+        }
+        isShowMyName = !isShowMyName
+      }
+    </script>
+
 
 
     <style>
@@ -19,40 +34,17 @@
     <font size="6" color="##009675">hello༼ つ ◕_◕ ༽つ</font>
     <hr width="100%" size="4" noshade="" align="left" color="#f975ff" />
     
-
-    
-    <script>
-      function hello(alertText){
-        alert("Hello! "+alertText)
-      }
-      function showMyName(){
-        document.getElementById("myName").innerHTML = `<span class="hello-text" style="font-size: 100px; color: #FF5757;">HI! THIS IS A CAT </span> My Name is: <b >FAT CAT</b>`;
-      }
-    </script>
-        
-        
-        
-        <p id="myName" >
-          <button onclick="showMyName()">
-            Click me!
-          </button>
-        </p>
-
-    
-    
-    
-
+    <p>
+      <span id="myName" style="font-size: 3em; color: #FF5757;"></span>
+      <button onclick="toggleMyName()">
+        Click me!
+      </button>
+    </p>
   
         <p align="center">
-      <del size="2" color="#67b4af">WHAT IF CATS LEARN HOW TO DO HTML? 🐶❓</del>
+      <del size="20px" color="#67b4af">WHAT IF CATS LEARN HOW TO DO HTML? 🐶❓</del>
     </p>
 
-
-
-
-    
-
-  
 
     <h4>"MY TALENT"   <button align="center" onclick="alert('nothing, lol')" >
       Click me!
@@ -160,11 +152,11 @@ h1{
 
  body{background-image: url("https://i.pinimg.com/originals/a8/3a/3f/a83a3f572a48d0435022e32547fda502.gif")}
 p{
-  border:3px outset lightseagreen;
+  border:10px outset lightseagreen;
   border-radius:100px;
   background-color:plum;
   padding-top:px;
-  margin-right:100px;
+  margin-right:600px;
 }
 p{font-family: monospace;}
 h1{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
