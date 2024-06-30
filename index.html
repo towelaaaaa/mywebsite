@@ -40,6 +40,7 @@
     }
 
 
+    
     </script>
 
 
@@ -192,6 +193,43 @@ a{
 }
  
  </style>
+
+
+
+<div id="goUpButton"><img class="goup" src=" https://i.pinimg.com/736x/ed/97/f0/ed97f091801d013711f5a5c882e294ca.jpg"></div>
+
+
+<script>
+
+  // Show the go up button when user scrolls down
+  window.onscroll = function () { scrollFunction() };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("goUpButton").style.display = "block";
+    } else {
+      document.getElementById("goUpButton").style.display = "none";
+    }
+  }
+
+  // Scroll back to the top of the page with smooth animation
+  document.getElementById("goUpButton").addEventListener("click", function () {
+    scrollToTop(1000); // 1000 milliseconds (1 second) for the animation duration
+  });
+
+  function scrollToTop(scrollDuration) {
+    var scrollStep = -window.scrollY / (scrollDuration / 15);
+    var scrollInterval = setInterval(function () {
+      if (window.scrollY != 0) {
+        window.scrollBy(0, scrollStep);
+      }
+      else clearInterval(scrollInterval);
+    }, 15);
+  }
+
+
+</script>
+
 
 
 </body>
