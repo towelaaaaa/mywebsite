@@ -18,6 +18,47 @@
         }
         isShowMyName = !isShowMyName
       }
+
+      const mySkills = ["everying", "everying", "everying"]
+    function generateMySkillInHTML() {
+      let htmlString = '<ol>'
+      for (const skill of mySkills) {
+        htmlString += `<li>${skill}</li>`
+      }
+
+      htmlString += "</ol>"
+
+      return htmlString;
+    }
+
+    let isShowMySkill = false;
+
+    function toggleMySkills() {
+      document.getElementById("mySkills").innerHTML = isShowMySkill ? "" : generateMySkillInHTML();
+      isShowMySkill = !isShowMySkill
+    }
+//
+    const myflaw = ["nothing", "nothing", "nothing"]
+    function generatemyflawInHTML() {
+      let htmlString = '<ol>'
+      for (const flaw of myflaw) {
+        htmlString += `<li>${flaw}</li>`
+      }
+
+      htmlString += "</ol>"
+
+      return htmlString;
+    }
+
+    let isShowMyflaw = false;
+
+    function toggleMyflaws() {
+      document.getElementById("myflaw").innerHTML = isShowMyflaw? "" : generatemyflawInHTML();
+      isShowMyflaw = !isShowMySkill
+    }
+
+
+
     </script>
 
 
@@ -42,23 +83,27 @@
     </p>
   
         <p align="center">
-      <del size="20px" color="#67b4af">WHAT IF CATS LEARN HOW TO DO HTML? 🐶❓</del>
+      <del size="20px" color="#67b4af">WHAT IF CATS LEARN HOW TO DO HTML? 🐶❓ <button align="center" onclick="alert('nothing, lol')" >
+        Click me!
+      </button></del>
     </p>
 
 
-    <h4>"MY TALENT"   <button align="center" onclick="alert('nothing, lol')" >
-      Click me!
-    </button></h4>
 
-    <ul>
-        <li color="">
-            <font size="6" color="orange"> ╰(*°▽°*)╯EVERYTHING (the best na)</font></li></li>
-    </ul>
-    <h5>"MY FLAW"</h5>
-    <ul>
-        <li>
-            <font size="6" color="purple"> (⊙_⊙;) NOTHING (I got no flaw na)</font></li>
-    </ul>
+    <div class="catbox">
+      <h2><font size="7" color="greeb"> MY TALENT ╰(*°▽°*)╯</font></h2>
+      <button style="float:center;" onclick="toggleMySkills()">
+        telent na ja!
+      </button>
+      
+      <div id="mySkills"></div>
+
+
+
+
+
+
+
     
   </body>
 </html>
